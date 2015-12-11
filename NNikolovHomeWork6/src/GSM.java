@@ -59,7 +59,7 @@ public class GSM {
 		if(this.lastOutgoingCall != null){
 		System.out.println("The recievers number is: " + lastOutgoingCall.receiver) ;
 		System.out.println("The duration was: " + lastOutgoingCall.duration);
-		System.out.println("The price for the call was: " + lastOutgoingCall.priceForAMin * lastOutgoingCall.duration);
+		System.out.println("The price for the call was: " + Call.priceForAMin * lastOutgoingCall.duration);
 		System.out.println("---------------------------------------------------------------------");
 		}
 		else{
@@ -73,7 +73,7 @@ public class GSM {
 		if(this.lastIncomingCall != null){
 		System.out.println("The callers number is: " + lastIncomingCall.caller) ;
 		System.out.println("The duration was: " + lastIncomingCall.duration);
-		System.out.println("The price for the call was: " + lastIncomingCall.priceForAMin * lastIncomingCall.duration);
+		System.out.println("The price for the call was: " + Call.priceForAMin * lastIncomingCall.duration);
 		System.out.println("---------------------------------------------------------------------");
 		}
 		else{
@@ -83,9 +83,9 @@ public class GSM {
 	
 	// Getting the price for all outgoing calls
 	
-	void getSumForCalls(){
-		int result = outgoingCallsDuration * (int)lastOutgoingCall.priceForAMin;
-		System.out.println(result);
+	String getSumForCalls(){
+		double result = this.outgoingCallsDuration * Call.priceForAMin;
+		return "The sum for all outgoing calls for gsm : " + this.model + " is :  " + result + " $";
 	}
 	
 

@@ -26,7 +26,8 @@ public class GSMCalls {
 		
 		purvi.printInfoForTheLastOutgoingCall();
 		purvi.printInfoForLastIncomingCall();
-		purvi.getSumForCalls();
+		System.out.println(purvi.getSumForCalls());
+		System.out.println(vtori.getSumForCalls());
 		
 				
 				
